@@ -33,6 +33,91 @@ We have language bindings in Shell, Ruby, Python, and JavaScript! You can view c
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
+# Introduction to VIDSigner
+
+The purpose of the services is to provide documents to sign to the
+VIDsigner devices and retrieve the documents once they are signed.  
+The services are suited under a SSL channel, which means that all data
+sent and retrieved to/from the services is sent through a secure
+ciphered channel.  
+For all operation descriptions, we include a relative URL. There is both
+a root URL for preproduction environment and for production environment.
+The integration trials must be performed in the preproduction
+environment.  
+The root URLs are the following:  
+
+<span>**PreProduction**</span>
+
+  
+https://pre-vidsignercloud.validatedid.com/api/v2.1
+
+<span>**Production**</span>
+
+  
+https://vidsignercloud.validatedid.com/api/v2.1  
+
+  
+For instance, to get the list of available devices for a subscription in
+preproduction, the full URL is:  
+<span>
+https://pre-vidsignercloud.validatedid.com/api/v2.1/devices</span>
+
+
+# IP Address
+
+The services are hold under a static IP address. Usually it is
+sufficient using the URLs of the services and not necessary to deal with
+IPs. The only exception is the case of creating a notification service
+(see Annex I) to be informed when a document.  
+Some networks require to add the VIDsigner Service IP Address to the
+trusted IPs in order to not be blocked by the firewall and get access to
+the notification service.
+
+VIDsigner can send notifications when a document has been signed or
+rejected (see Annex I for more information). Those notifications are
+sent from the following IPs:  
+
+<span>**Production:**</span>
+
+23.101.65.212
+
+<span>**Pre-Production:**</span>
+
+52.166.168.111
+
+
+# Conventions
+
+General conventions for VIDsigner REST APIs:  
+Requests require authentication (see “Authentication” in section
+“[\[SEC:Authentication\]](#SEC:Authentication)”).  
+HTTP requests behave uniformly with all resources by giving a uniform
+meaning to HTTP verbs:  
+
+<span>**GET:**</span>
+
+read  
+
+create  
+
+erase data  
+
+In all the samples of the present document the data of the HTTP request
+and responses is codified in JSON. However XML language is supported as
+well. Check the section “Data Format and Response Codes” to get more
+information.
+
+# SSL
+
+All the information is sent to and received from the services through
+SSL, keeping the data secured at all times. In order to establish the
+SSL channel, it is necessary to install the ValidatedID Host Certificate
+in your certificate store as a trusted root certificate.  
+There are different certificate stores, such as Windows Certificate
+Store, Java Certificate Store and SAP Certificate Store. Please refer to
+your application framework documentation to check which store to use.
+
+
 # Authentication
 
 > To authorize, use this code:
