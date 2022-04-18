@@ -320,6 +320,18 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
+            <a href="#introduction-to-vidsigner" class="toc-h1 toc-link" data-title="Introduction to VIDSigner">Introduction to VIDSigner</a>
+          </li>
+          <li>
+            <a href="#ip-address" class="toc-h1 toc-link" data-title="IP Address">IP Address</a>
+          </li>
+          <li>
+            <a href="#conventions" class="toc-h1 toc-link" data-title="Conventions">Conventions</a>
+          </li>
+          <li>
+            <a href="#ssl" class="toc-h1 toc-link" data-title="SSL">SSL</a>
+          </li>
+          <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
@@ -357,6 +369,77 @@
 <p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<h1 id='introduction-to-vidsigner'>Introduction to VIDSigner</h1>
+<p>The purpose of the services is to provide documents to sign to the
+VIDsigner devices and retrieve the documents once they are signed.<br>
+The services are suited under a SSL channel, which means that all data
+sent and retrieved to/from the services is sent through a secure
+ciphered channel.<br>
+For all operation descriptions, we include a relative URL. There is both
+a root URL for preproduction environment and for production environment.
+The integration trials must be performed in the preproduction
+environment.<br>
+The root URLs are the following:  </p>
+
+<p><span><strong>PreProduction</strong></span></p>
+
+<p>https://pre-vidsignercloud.validatedid.com/api/v2.1</p>
+
+<p><span><strong>Production</strong></span></p>
+
+<p>https://vidsignercloud.validatedid.com/api/v2.1  </p>
+
+<p>For instance, to get the list of available devices for a subscription in
+preproduction, the full URL is:<br>
+<span>
+https://pre-vidsignercloud.validatedid.com/api/v2.1/devices</span></p>
+<h1 id='ip-address'>IP Address</h1>
+<p>The services are hold under a static IP address. Usually it is
+sufficient using the URLs of the services and not necessary to deal with
+IPs. The only exception is the case of creating a notification service
+(see Annex I) to be informed when a document.<br>
+Some networks require to add the VIDsigner Service IP Address to the
+trusted IPs in order to not be blocked by the firewall and get access to
+the notification service.</p>
+
+<p>VIDsigner can send notifications when a document has been signed or
+rejected (see Annex I for more information). Those notifications are
+sent from the following IPs:  </p>
+
+<p><span><strong>Production:</strong></span></p>
+
+<p>23.101.65.212</p>
+
+<p><span><strong>Pre-Production:</strong></span></p>
+
+<p>52.166.168.111</p>
+<h1 id='conventions'>Conventions</h1>
+<p>General conventions for VIDsigner REST APIs:<br>
+Requests require authentication (see “Authentication” in section
+“<a href="#SEC:Authentication">[SEC:Authentication]</a>”).<br>
+HTTP requests behave uniformly with all resources by giving a uniform
+meaning to HTTP verbs:  </p>
+
+<p><span><strong>GET:</strong></span></p>
+
+<p>read  </p>
+
+<p>create  </p>
+
+<p>erase data  </p>
+
+<p>In all the samples of the present document the data of the HTTP request
+and responses is codified in JSON. However XML language is supported as
+well. Check the section “Data Format and Response Codes” to get more
+information.</p>
+<h1 id='ssl'>SSL</h1>
+<p>All the information is sent to and received from the services through
+SSL, keeping the data secured at all times. In order to establish the
+SSL channel, it is necessary to install the ValidatedID Host Certificate
+in your certificate store as a trusted root certificate.<br>
+There are different certificate stores, such as Windows Certificate
+Store, Java Certificate Store and SAP Certificate Store. Please refer to
+your application framework documentation to check which store to use.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
