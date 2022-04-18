@@ -295,7 +295,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell123&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;,&quot;csharp&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -305,10 +305,11 @@
     <div class="toc-wrapper">
       <img src="images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell123">shell123</a>
+              <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="ruby">ruby</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="csharp">csharp</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -372,6 +373,9 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="k">const</span> <span class="n">kittn</span> <span class="p">=</span> <span class="nf">require</span><span class="p">(</span><span class="err">'</span><span class="n">kittn</span><span class="err">'</span><span class="p">);</span>
+
+<span class="k">let</span> <span class="n">api</span> <span class="p">=</span> <span class="n">kittn</span><span class="p">.</span><span class="nf">authorize</span><span class="p">(</span><span class="err">'</span><span class="n">meowmeowmeow</span><span class="err">'</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
@@ -400,6 +404,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="k">const</span> <span class="n">kittn</span> <span class="p">=</span> <span class="nf">require</span><span class="p">(</span><span class="err">'</span><span class="n">kittn</span><span class="err">'</span><span class="p">);</span>
+
+<span class="k">let</span> <span class="n">api</span> <span class="p">=</span> <span class="n">kittn</span><span class="p">.</span><span class="nf">authorize</span><span class="p">(</span><span class="err">'</span><span class="n">meowmeowmeow</span><span class="err">'</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -461,6 +468,9 @@ Remember — a happy kitten is an authenticated kitten!
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="k">const</span> <span class="n">kittn</span> <span class="p">=</span> <span class="nf">require</span><span class="p">(</span><span class="err">'</span><span class="n">kittn</span><span class="err">'</span><span class="p">);</span>
+
+<span class="k">let</span> <span class="n">api</span> <span class="p">=</span> <span class="n">kittn</span><span class="p">.</span><span class="nf">authorize</span><span class="p">(</span><span class="err">'</span><span class="n">meowmeowmeow</span><span class="err">'</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -513,7 +523,10 @@ Remember — a happy kitten is an authenticated kitten!
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
   </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+</span></code></pre></div><div class="highlight"><pre class="highlight csharp tab-csharp"><code><span class="k">const</span> <span class="n">kittn</span> <span class="p">=</span> <span class="nf">require</span><span class="p">(</span><span class="err">'</span><span class="n">kittn</span><span class="err">'</span><span class="p">);</span>
+
+<span class="k">let</span> <span class="n">api</span> <span class="p">=</span> <span class="n">kittn</span><span class="p">.</span><span class="nf">authorize</span><span class="p">(</span><span class="err">'</span><span class="n">meowmeowmeow</span><span class="err">'</span><span class="p">);</span>
+</code></pre></div>
 <p>This endpoint deletes a specific kitten.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
@@ -649,10 +662,11 @@ This examples section is stored in a separate file in <code>includes/_errors.md<
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell123">shell123</a>
+                <a href="#" data-language-name="shell">shell</a>
                 <a href="#" data-language-name="ruby">ruby</a>
                 <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="csharp">csharp</a>
           </div>
       </div>
     </div>
