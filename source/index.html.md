@@ -2,10 +2,11 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell123
+  - shell
   - ruby
   - python
   - javascript
+  - csharp
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -60,6 +61,12 @@ const kittn = require('kittn');
 let api = kittn.authorize('meowmeowmeow');
 ```
 
+```csharp
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
 > Make sure to replace `meowmeowmeow` with your API key.
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
@@ -100,6 +107,12 @@ const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
 let kittens = api.kittens.get();
+```
+
+```csharp
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
 ```
 
 > The above command returns JSON structured like this:
@@ -168,6 +181,12 @@ let api = kittn.authorize('meowmeowmeow');
 let max = api.kittens.get(2);
 ```
 
+```csharp
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
 > The above command returns JSON structured like this:
 
 ```json
@@ -230,6 +249,12 @@ let max = api.kittens.delete(2);
   "id": 2,
   "deleted" : ":("
 }
+```
+
+```csharp
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
 ```
 
 This endpoint deletes a specific kitten.
